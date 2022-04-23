@@ -21,6 +21,7 @@
   padding: 15px;
   height: 100%;
   color: var(--color-two);
+  font-family: "Lobster";
 }
 
 .nav ul li:first-child > img {
@@ -30,7 +31,11 @@
 
 .nav ul li:first-child {
   margin-right: auto;
+
   color: var(--color-three);
+}
+
+.nav ul li:first-child p {
 }
 
 .nav ul li:nth-child(3) {
@@ -39,4 +44,16 @@
 
 .nav ul li:nth-child(3) {
   color: var(--color-one);
+}
+
+.nav ul li:hover {
+  color: var(--color-three);
+}
+
+.nav ul li:active {
+  transform: translateY(1px);
+}
+
+.nav ul li:first-child:active {
+  transform: translateY(0);
 }

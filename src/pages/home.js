@@ -22,10 +22,11 @@ const displayHome = function () {
 };
 
 const removeHome = function () {
+  while (home.firstChild) {
+    home.removeChild(home.firstChild);
+  }
+
   home.remove();
-  h.remove();
-  p1.remove();
-  p2.remove();
 };
 
 export { removeHome, displayHome };

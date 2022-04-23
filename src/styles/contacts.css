@@ -1,21 +1,30 @@
 .contacts {
   margin: 3% auto;
-  background-color: rgba(199, 200, 202, 0.8);
+  /* background-color: rgba(199, 200, 202, 0.8);
+  box-shadow: 2px 2px 30px var(--color-four); */
   color: var(--color-four);
   font-weight: 900;
   font-size: calc(0.8rem + 0.5vw);
   padding: 25px;
   display: flex;
   flex-wrap: wrap;
-  font-family: "Times New Roman", Times, serif;
   gap: 25px;
+
+  animation: moveInBottom 0.8s;
 }
 
 .contacts > img {
   max-width: 100%;
+  background-color: rgba(199, 200, 202, 0.8);
+  box-shadow: 2px 2px 30px var(--color-four);
+  padding: 10px;
 }
 
 .contacts > div {
   padding: 20px;
-  background-color: rgb(240, 243, 249);
+  background-color: rgba(199, 200, 202, 0.8);
+  box-shadow: 2px 2px 30px var(--color-four);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

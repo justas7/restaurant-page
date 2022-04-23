@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Eczar&family=Lobster&display=swap");
 
 *,
 *::after,
@@ -13,7 +14,8 @@
   --color-two: #c7c8ca;
   --color-three: #bf7e04;
   --color-four: #343232;
-  font-family: "Lobster", cursive, "Times New Roman", Times, serif;
+
+  font-family: "Eczar", "Times New Roman", Times, serif;
 }
 
 #content {
@@ -30,10 +32,14 @@
   background-repeat: no-repeat;
 }
 
-.active {
-  display: block;
-}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 
-.hidden {
-  display: none;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

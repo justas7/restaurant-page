@@ -19,16 +19,16 @@ ul.addEventListener("click", function (e) {
     removeHome();
     removeMenu();
     removeContacts();
-    menuEl = displayMenu();
+    displayMenu();
   } else if (e.target.textContent === "Contacts") {
     removeHome();
     removeMenu();
     removeContacts();
-    contactsEl = displayContacts();
+    displayContacts();
   } else if (e.target.textContent === "Home") {
     removeHome();
     removeMenu();
     removeContacts();
-    homeEl = displayHome();
+    displayHome();
   }
 });
