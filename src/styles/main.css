@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-one: #9a3425; /* rgb(154, 52, 37) */
+  --color-two: #c7c8ca;
+  --color-three: #bf7e04;
+  --color-four: #343232;
+  font-family: "Lobster", cursive, "Times New Roman", Times, serif;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 2000px;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--color-one);
+  background-image: url("../images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active {
+  color: var(--color-three);
+}
