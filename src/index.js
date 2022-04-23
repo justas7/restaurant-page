@@ -3,11 +3,32 @@ import "./styles/main.css";
 import "./styles/home.css";
 import "./styles/nav.css";
 import "./styles/menu.css";
+import "./styles/contacts.css";
 
 import displayNav from "./pages/nav.js";
-import displayHome from "./pages/home.js";
-import displayMenu from "./pages/menu.js";
+import { removeHome, displayHome } from "./pages/home.js";
+import { removeMenu, displayMenu } from "./pages/menu.js";
+import { removeContacts, displayContacts } from "./pages/contacts.js";
 
-displayNav();
-// displayHome();
-displayMenu();
+const ul = displayNav();
+
+displayHome();
+
+ul.addEventListener("click", function (e) {
+  if (e.target.textContent === "Menu") {
+    removeHome();
+    removeMenu();
+    removeContacts();
+    menuEl = displayMenu();
+  } else if (e.target.textContent === "Contacts") {
+    removeHome();
+    removeMenu();
+    removeContacts();
+    contactsEl = displayContacts();
+  } else if (e.target.textContent === "Home") {
+    removeHome();
+    removeMenu();
+    removeContacts();
+    homeEl = displayHome();
+  }
+});

@@ -3,6 +3,16 @@ import Frankfurter2 from "../images/frankfurter2.png";
 import Frankfurter4 from "../images/frankfurter4.png";
 import Frankfurter5 from "../images/frankfurter5.png";
 
+const content = document.getElementById("content");
+const menu = document.createElement("div");
+let imgContainer;
+let menuItem;
+let infoContainer;
+let h;
+let p1;
+let p2;
+let img;
+
 const products = [
   {
     name: "Sticky cider onion frankfurters",
@@ -31,17 +41,14 @@ const products = [
 ];
 
 const displayMenu = function () {
-  const content = document.getElementById("content");
-  const menu = document.createElement("div");
-
   products.forEach((product) => {
-    const imgContainer = document.createElement("div");
-    const menuItem = document.createElement("div");
-    const infoContainer = document.createElement("div");
-    const h = document.createElement("h1");
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const img = new Image();
+    imgContainer = document.createElement("div");
+    menuItem = document.createElement("div");
+    infoContainer = document.createElement("div");
+    h = document.createElement("h1");
+    p1 = document.createElement("p");
+    p2 = document.createElement("p");
+    img = new Image();
 
     img.src = product.img;
     h.textContent = product.name;
@@ -62,10 +69,13 @@ const displayMenu = function () {
     menu.appendChild(menuItem);
     content.appendChild(menu);
   });
-
-  //   menu.textContent = ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  //   Error, reprehenderit consequatur!
-  //   Quibusdam, quidem in? Ducimus accusamus dicta doloremque facilis vel?`;
 };
 
-export default displayMenu;
+const removeMenu = function () {
+  while (menu.firstChild) {
+    menu.removeChild(menu.firstChild);
+  }
+  menu.remove();
+};
+
+export { removeMenu, displayMenu };

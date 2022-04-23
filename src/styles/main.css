@@ -31,5 +31,9 @@
 }
 
 .active {
-  color: var(--color-three);
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

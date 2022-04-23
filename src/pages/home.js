@@ -1,9 +1,10 @@
+const content = document.getElementById("content");
+const home = document.createElement("div");
+const h = document.createElement("h1");
+const p1 = document.createElement("p");
+const p2 = document.createElement("p");
+
 const displayHome = function () {
-  const home = document.createElement("div");
-  const h = document.createElement("h1");
-  const p1 = document.createElement("p");
-  const p2 = document.createElement("p");
-  const content = document.getElementById("content");
   home.classList.add("home");
   h.textContent = "Frank's Frankurters";
 
@@ -16,6 +17,15 @@ const displayHome = function () {
   home.appendChild(p1);
   home.appendChild(p2);
   content.appendChild(home);
+
+  return home;
 };
 
-export default displayHome;
+const removeHome = function () {
+  home.remove();
+  h.remove();
+  p1.remove();
+  p2.remove();
+};
+
+export { removeHome, displayHome };
